@@ -50,7 +50,7 @@
 }
 
 
-.close-btn {
+.modal__close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -62,14 +62,13 @@
   background-color: var(--main-white);
 }
 
-.close-btn svg {
+.modal__icon-close {
   position: absolute;
   right: 5px;
   top: 5px;
 }
 
-.modal-fieldset {
-
+.modal__fieldset {
   position: relative;
   width: 448px;
   height: 40px;
@@ -79,21 +78,20 @@
   border-radius: 4px;
 }
 
-.modal p {
+.modal__title {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.17;
   margin: 0;
-  margin-bottom: 12px;
 }
 
-.modal-form {
+.modal__form {
   display: flex;
   flex-direction: column;
 }
 
-.modal-form .icon {
+.modal__icon {
   fill: var(--black-main);
   margin-right: 5px;
   width: 18px;
@@ -102,7 +100,7 @@
   margin-left: 12px;
 }
 
-.modal-form label {
+.modal__label {
   position: absolute;
   top: -18px;
   left: 0;
@@ -110,7 +108,7 @@
   color: var(--main-silver);
 }
 
-.form-btn {
+.modal__form-btn {
   width: 200px;
   height: 50px;
   background-color: var(--main-blue);
@@ -128,8 +126,7 @@
   box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 1px rgba(0, 0, 0, 0.14), 3px 0px 1px rgba(0, 0, 0, 0.12);
 }
 
-.modal-form input {
-
+.modal__input {
   position: absolute;
   top: 10px;
   left: 42px;
@@ -140,20 +137,20 @@
   font-size: 16px;
 }
 
-.modal-form input::placeholder {
+.modal__input::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
 }
 
-.modal-fieldset:has(input:focus) {
+.modal__fieldset:has(.modal__input:focus) {
   border-color: var(--main-blue);
 }
 
-.modal-fieldset:has(input:focus) .icon {
+.modal__fieldset:has(.modal__input:focus) .modal__icon {
   fill: var(--main-blue);
 }
 
-.fieldset-textarea {
+.modal__fieldset-textarea {
   width: 448px;
   height: 120px;
   padding: 12px 16px 12px;
@@ -164,11 +161,11 @@
   position: relative;
 }
 
-.fieldset-textarea:has(textarea:focus) {
+.modal__fieldset-textarea:has(.modal__textarea:focus) {
   border-color: var(--main-blue);
 }
 
-.label-textarea {
+.modal__label-textarea {
   position: absolute;
   top: -18px;
   left: 0;
@@ -176,7 +173,7 @@
   color: var(--main-silver);
 }
 
-.textarea {
+.modal__textarea {
   position: absolute;
   top: 28px;
   left: 16px;
@@ -190,19 +187,21 @@
   resize: none;
 }
 
-.textarea::placeholder {
+.modal__textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
 }
 
-.checkbox-fieldset {
+.modal__fieldset-checkbox {
   position: relative;
   border: none;
   padding: 0;
-  margin: 28px 0 0;
+  margin: 20px 0 0;
+  align-self: center;
+
 }
 
-.legal-checkbox {
+.modal__legal-checkbox {
   position: relative;
   font-size: 14px;
   line-height: 1.71;
@@ -213,45 +212,50 @@
 
 }
 
-.legal-checkbox a {
+.modal__link-checkbox {
   color: var(--main-blue);
 }
 
-.legal-checkbox input {
+.modal__input-checkbox {
   position: absolute;
   width: 0;
   height: 0;
   left: 0;
-  top: 2px;
+  top: 1px;
   cursor: pointer;
   opacity: 0;
 
 
 }
 
-.legal-checkbox .checkmark {
+.modal__checkmark {
   position: absolute;
   width: 15px;
   height: 14px;
   left: 0px;
-  top: 2px;
+  top: 0px;
 }
 
-
-.checkmark~svg {
+.modal__icon-checkmark {
   position: absolute;
-  left: 1px;
-  top: 3px;
+  left: 2px;
+  top: 1px;
+
   fill: var(--main-white);
   opacity: 0;
   transition: opacity 0.25s;
 }
 
-.legal-checkbox input:checked~svg {
+.modal__checkmark-icon-sqr {
+  position: absolute;
+  top: 0px;
+}
+
+.modal__input-checkbox:checked~.modal__icon-checkmark {
   opacity: 1;
 }
 
-.legal-checkbox input:checked~.checkmark {
+.modal__input-checkbox:checked~.modal__checkmark {
   background-color: var(--main-blue);
   stroke: var(--main-blue);
 }
