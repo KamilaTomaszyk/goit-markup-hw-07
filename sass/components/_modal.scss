@@ -103,7 +103,7 @@
   &__fieldset {
     &:has(.modal__input:focus) {
       border-color: var(--main-blue);
-      &.modal__icon {
+      & .modal__icon {
         fill: var(--main-blue);
       }
     }
