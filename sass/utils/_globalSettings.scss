@@ -23,6 +23,14 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  &-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 0 0 50px 0;
+  }
 }
 
 ul {
@@ -31,14 +39,6 @@ ul {
   margin-block: 0;
 }
 
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin: 0 0 50px 0;
-}
 .backdrop {
   position: fixed;
   top: 0;

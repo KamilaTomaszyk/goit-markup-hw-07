@@ -6,16 +6,13 @@
 
   letter-spacing: 0.03em;
   text-decoration-line: none;
-}
-
-.logo__first-word {
-  color: Var(--main-blue);
-}
-
-.logo__second-word {
-  color: Var(--second-black);
-}
-
-.logo__second-word--footer {
-  color: var(--main-white);
+  &__first-word {
+    color: Var(--main-blue);
+  }
+  &__second-word {
+    color: Var(--second-black);
+  }
+  &__second-word--footer {
+    color: var(--main-white);
+  }
 }
